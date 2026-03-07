@@ -1,0 +1,135 @@
+.page-header {
+  padding-top: 150px;
+  padding-bottom: 2rem;
+  background: radial-gradient(circle at center top, rgba(79, 70, 229, 0.15) 0%, transparent 60%);
+}
+
+.page-header h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+/* Mission Vision Grid */
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.mv-card {
+  padding: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255,255,255,0.2);
+}
+
+.mv-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Core Focus Grid */
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.focus-item {
+  padding: 2.5rem 2rem;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.focus-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.5rem;
+}
+
+.focus-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.focus-item::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 100px; height: 100px;
+  background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+  opacity: 0.1;
+  border-bottom-left-radius: 100%;
+}
+
+/* Differentiator */
+.diff-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  padding: 0;
+  overflow: hidden;
+  align-items: center;
+}
+
+.diff-content {
+  padding: 4rem;
+}
+
+.diff-content h2 {
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  margin-bottom: 2rem;
+}
+
+.diff-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.diff-list li strong {
+  display: block;
+  font-size: 1.25rem;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  font-family: 'Outfit', sans-serif;
+}
+
+.diff-visual {
+  height: 100%;
+  background: rgba(255,255,255,0.02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgba(255,255,255,0.05);
+}
+
+.large-bg-icon {
+  width: 200px;
+  height: 200px;
+  color: rgba(255,255,255,0.05);
+}
+
+@media (max-width: 992px) {
+  .mv-grid {
+    grid-template-columns: 1fr;
+  }
+  .focus-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .diff-container {
+    grid-template-columns: 1fr;
+  }
+  .diff-content {
+    padding: 3rem 2rem;
+  }
+  .diff-visual {
+    padding: 4rem 0;
+    border-left: none;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+}
