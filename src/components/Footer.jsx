@@ -37,10 +37,10 @@ const Footer = () => {
               <Mail size={16} /> info@byterisetech.com
             </div>
             <div className="contact-item">
-              <Phone size={16} /> +1 (555) 123-4567
+              <Phone size={16} /> +260 777 600 184
             </div>
             <div className="contact-item">
-              <MapPin size={16} /> Tech District, Innovation Ave
+              <MapPin size={16} /> Byterise Innovation Hub
             </div>
           </div>
         </div>
